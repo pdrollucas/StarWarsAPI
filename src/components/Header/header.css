@@ -1,0 +1,35 @@
+header{
+    width: 15vw;
+    background-color: #03363D;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-superior{
+    padding-top: 2vw;
+    padding-left: 2vw;
+}
+
+.logo{
+    width: 8vw;
+}
+
+.dashboard{
+    display: flex;
+    margin-top: 2vw;
+    gap: 0.5vw;
+    text-decoration: none;
+    color: white;
+}
+
+.header-inferior{
+    padding: 1vw;
+    border-top: 2px solid #131B24;
+}
+
+.header-inferior img{
+    width: 1.25vw;
+}

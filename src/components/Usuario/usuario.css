@@ -1,0 +1,12 @@
+.usuario{
+    width: 85vw;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 2vh 2vw;
+    border-bottom: 1px solid lightgray;
+    text-decoration: none;
+    color: black;
+}
