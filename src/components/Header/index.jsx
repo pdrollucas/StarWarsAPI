@@ -5,14 +5,14 @@ function Header(){
     return(
         <header>
             <div className='header-superior'>
-                <Link to="/"><img src="../../../src/assets/logo-starwars.png" alt="Logo Star Wars" className='logo'/></Link>
+                <Link to="/"><img src="src/assets/logo-starwars.png" alt="Logo Star Wars" className='logo'/></Link>
                 <Link to="/dashboard" className='dashboard'>
-                    <img src="../../../src/assets/dashboard.png" alt="Ícone de relógio"/>
+                    <img src="src/assets/dashboard.png" alt="Ícone de relógio"/>
                     <p>Dashboard</p>
                 </Link>
             </div>
             <div className='header-inferior'>
-                <img src="../../../src/assets/menu-sair.png" alt="Ícone de sair" />
+                <img src="src/assets/menu-sair.png" alt="Ícone de sair" />
             </div>
         </header>
     )
