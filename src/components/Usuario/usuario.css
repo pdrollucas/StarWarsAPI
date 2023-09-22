@@ -10,3 +10,11 @@
     text-decoration: none;
     color: black;
 }
+
+.usuario p{
+    font-size: 1vw;
+}
+
+.usuario img{
+    width: 1.5vw;
+}

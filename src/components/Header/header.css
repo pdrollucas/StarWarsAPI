@@ -1,5 +1,5 @@
 header{
-    width: 15vw;
+    width: 16vw;
     background-color: #03363D;
     color: white;
 
@@ -9,20 +9,28 @@ header{
 }
 
 .header-superior{
-    padding-top: 2vw;
-    padding-left: 2vw;
+    padding: 2vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo{
-    width: 8vw;
+    width: 10vw;
 }
 
 .dashboard{
     display: flex;
+    align-items: center;
     margin-top: 2vw;
     gap: 0.5vw;
     text-decoration: none;
     color: white;
+}
+
+.dashboard p{
+    font-size: 1vw;
 }
 
 .header-inferior{

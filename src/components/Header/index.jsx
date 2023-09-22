@@ -5,7 +5,7 @@ function Header(){
     return(
         <header>
             <div className='header-superior'>
-                <Link to="/"><img src="../../../src/assets/logo-tiflux.png" alt="Logo Tiflux" className='logo'/></Link>
+                <Link to="/"><img src="../../../src/assets/logo-starwars.png" alt="Logo Star Wars" className='logo'/></Link>
                 <Link to="/dashboard" className='dashboard'>
                     <img src="../../../src/assets/dashboard.png" alt="Ícone de relógio"/>
                     <p>Dashboard</p>
