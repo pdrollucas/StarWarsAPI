@@ -65,7 +65,7 @@ function Home() {
           <h2>Pessoas</h2>
           <div className="area-input">
             <input type="search" />
-            <img src="src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
+            <img src="./src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
           </div>
         </div>
         <TabelaPersonagens />
@@ -75,7 +75,7 @@ function Home() {
           <h2>Veículos</h2>
           <div className="area-input">
             <input type="search" />
-            <img src="src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
+            <img src="./src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
           </div>
         </div>
         <TabelaVeiculos />
@@ -85,7 +85,7 @@ function Home() {
           <h2>Filmes</h2>
           <div className="area-input">
             <input type="search" />
-            <img src="src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
+            <img src="./src/assets/search - anticon.png" alt="Lupa de pesquisa" className="lupa"/>
           </div>
         </div>
         <TabelaFilmes />
