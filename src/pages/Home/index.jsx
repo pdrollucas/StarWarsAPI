@@ -31,13 +31,17 @@ function Home() {
     contagemShips: 0,
   });
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     async function loadData() {
       try {
-        const people = await api.get('people/');
-        const planets = await api.get('planets/');
-        const films = await api.get('films/');
-        const ships = await api.get('starships/');
+        const [people, planets, films, ships] = await Promise.all([
+          api.get('people/'),
+          api.get('planets/'),
+          api.get('films/'),
+          api.get('starships/'),
+        ]);
 
         setContagens({
           contagemPeople: people.data.count,
@@ -45,6 +49,8 @@ function Home() {
           contagemFilms: films.data.count,
           contagemShips: ships.data.count,
         });
+
+        setLoading(false);
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
       }
@@ -55,19 +61,28 @@ function Home() {
 
   return (
     <div className="home">
-      <section className="numeros">
-        <NumberDisplay title="Pessoas" count={contagens.contagemPeople} />
-        <NumberDisplay title="Planetas" count={contagens.contagemPlanets} />
-        <NumberDisplay title="Filmes" count={contagens.contagemFilms} />
-        <NumberDisplay title="Espaço naves" count={contagens.contagemShips} />
-      </section>
+      {loading ? (
+        <section className="numeros">
+          <NumberDisplay title="carregando" count="..." />
+          <NumberDisplay title="carregando" count="..." />
+          <NumberDisplay title="carregando" count="..." />
+          <NumberDisplay title="carregando" count="..." />
+        </section>
+      ) : (
+        <section className="numeros">
+          <NumberDisplay title="Pessoas" count={contagens.contagemPeople} />
+          <NumberDisplay title="Planetas" count={contagens.contagemPlanets} />
+          <NumberDisplay title="Filmes" count={contagens.contagemFilms} />
+          <NumberDisplay title="Espaço naves" count={contagens.contagemShips} />
+        </section>
+      )}
 
       <section className="container">
         <div className="container-topo">
           <h2>Pessoas</h2>
           <div className="area-input">
             <input type="search" />
-            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa"/>
+            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa" />
           </div>
         </div>
         <TabelaPersonagens />
@@ -77,7 +92,7 @@ function Home() {
           <h2>Veículos</h2>
           <div className="area-input">
             <input type="search" />
-            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa"/>
+            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa" />
           </div>
         </div>
         <TabelaVeiculos />
@@ -87,7 +102,7 @@ function Home() {
           <h2>Filmes</h2>
           <div className="area-input">
             <input type="search" />
-            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa"/>
+            <img src={iconeLupa} alt="Lupa de pesquisa" className="lupa" />
           </div>
         </div>
         <TabelaFilmes />
